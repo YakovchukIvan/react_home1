@@ -1,0 +1,23 @@
+{
+  "name": "typescript1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YakovchukIvan/react_home1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YakovchukIvan/react_home1/issues"
+  },
+  "homepage": "https://github.com/YakovchukIvan/react_home1#readme",
+  "dependencies": {
+    "typescript": "^5.0.4"
+  }
+}
