@@ -58,7 +58,68 @@ console.log(rectangle.calculateArea());
 const circle = new Circle(7);
 console.log(circle.calculateArea());
 
-
 }
+
+
+
+
+// task 3
+
+
+class Store {
+  private name: string;
+  private products: string[];
+
+  constructor(name: string) {
+    this.name = name;
+    this.products = [];
+  }
+
+  addProduct(product: string): void {
+    this.products.push(product);
+  }
+
+  removeProduct(product: string): void {
+    const index = this.products.indexOf(product);
+    console.log("Store  removeProduct  index:", index)
+    if (index !== -1) {
+      this.products.splice(index, 1);
+    }
+  }
+
+  displayProducts(): void {
+    console.log(`Products in ${this.name}:`);
+    console.log(`Products in ${this.products}:`);
+    this.products.forEach((product, index) => {
+      console.log(`${index + 1}. ${product}`);
+    });
+  }
+}
+
+const store = new Store("My Store");
+
+store.addProduct("Adidas");
+store.addProduct("Nike");
+store.addProduct("Puma");
+store.addProduct("Lenovo");
+store.addProduct("Apple");
+
+console.log(store.displayProducts());
+// Виведе:
+// Products in My Store:
+// 1. Product 1
+// 2. Product 2
+// 3. Product 3
+
+store.removeProduct("Nike");
+store.removeProduct("Nike");
+
+console.log(store.displayProducts());
+
+// Виведе:
+// Products in My Store:
+// 1. Product 1
+// 2. Product 3
+
 
 App()
